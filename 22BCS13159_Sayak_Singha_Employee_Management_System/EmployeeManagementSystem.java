@@ -83,7 +83,7 @@ public class EmployeeManagementSystem {
 
             System.out.print("Enter Employee Salary: ");
             double salary = scanner.nextDouble();
-            scanner.nextLine(); // consume newline
+            scanner.nextLine();
 
             Employee emp = new Employee(name, id, designation, salary);
 
@@ -97,7 +97,7 @@ public class EmployeeManagementSystem {
             System.out.println("Error writing to file.");
         } catch (Exception e) {
             System.out.println("Invalid input. Please try again.");
-            scanner.nextLine(); // Clear invalid input
+            scanner.nextLine();
         }
     }
 
