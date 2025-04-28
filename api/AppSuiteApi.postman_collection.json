@@ -1,0 +1,110 @@
+{
+	"info": {
+		"_postman_id": "55b0bea6-33a7-49eb-845b-7c3f33de2557",
+		"name": "AppSuiteApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34265304"
+	},
+	"item": [
+		{
+			"name": "Get Request",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/appInf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"appInf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": 181,\r\n    \"_name\": \"Tool\",\r\n    \"_author\": \"GHI\",\r\n    \"_authTag\": \"GHI.Tool.181\",\r\n    \"_size\": 1024,\r\n    \"_valid\": null,\r\n    \"_dateAdded\": \"2024-12-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/appInf",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"appInf"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Request",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"_id\": 181,\r\n    \"_name\": \"Utility\",\r\n    \"_author\": \"GHI\",\r\n    \"_authTag\": \"GHI.Utility.181\",\r\n    \"_size\": 1024,\r\n    \"_valid\": null,\r\n    \"_dateAdded\": \"2024-12-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/appInf/181",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"appInf",
+						"181"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Request",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/appInf/181",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"appInf",
+						"181"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
