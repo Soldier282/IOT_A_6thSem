@@ -2,10 +2,9 @@ class TicketBookingSystem {
     private boolean[] seats;
 
     public TicketBookingSystem(int numberOfSeats) {
-        seats = new boolean[numberOfSeats]; // false = available, true = booked
+        seats = new boolean[numberOfSeats];
     }
 
-    // Synchronized to prevent race conditions
     public synchronized boolean bookSeat(int seatNumber, String customerName) {
         if (seatNumber < 0 || seatNumber >= seats.length) {
             System.out.println(customerName + " tried to book invalid seat " + seatNumber);
@@ -32,7 +31,7 @@ class Customer extends Thread {
         this.seatNumber = seatNumber;
         this.customerName = customerName;
         setName(customerName);
-        setPriority(priority); // Higher priority for VIPs
+        setPriority(priority);
     }
 
     @Override
@@ -43,7 +42,7 @@ class Customer extends Thread {
 
 public class TicketBookingMain {
     public static void main(String[] args) {
-        TicketBookingSystem system = new TicketBookingSystem(10); // 10 seats
+        TicketBookingSystem system = new TicketBookingSystem(10);
 
         Customer vip1 = new Customer(system, 3, "VIP_Customer1", Thread.MAX_PRIORITY);
         Customer vip2 = new Customer(system, 5, "VIP_Customer2", Thread.MAX_PRIORITY);
